@@ -1,4 +1,4 @@
-''' Thsi FCFS Disk Scheduling algorithm. This program will serve a a disk drive with 5,000 cylinders numbered 0-4,999.
+''' FCFS Disk Scheduling algorithm. This program will serve as a disk drive with 5,000 cylinders numbered 0-4,999.
 This program has 50 requests provided below and serve them accordingly to the FCFS algorithm.
 The program will be passed the initial position of the disk head (65) as a parameter on the command line and
 it wil return the the total amount of head movement. '''
