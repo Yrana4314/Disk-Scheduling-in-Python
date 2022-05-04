@@ -1,8 +1,3 @@
-''' FCFS Disk Scheduling algorithm. This program will serve as a disk drive with 5,000 cylinders numbered 0-4,999.
-This program has 50 requests provided below and serve them accordingly to the FCFS algorithm.
-The program will be passed the initial position of the disk head (65) as a parameter on the command line and
-it wil return the the total amount of head movement. '''
-
 ''' FCFS Disk Schedulig algorithm in Python
 By Yogesh Rana
 CISC3320'''
@@ -30,6 +25,7 @@ def fcfs(head, requests):
                 head_movement += difference
                 head = request
             print(request)
+            print(f" head movement for now: {head_movement}")
     return head_movement
 
 if __name__ == "__main__":
@@ -46,11 +42,10 @@ if __name__ == "__main__":
     2866, 947, 3794, 2353, 3970, 3948, 1815, 4621, 372, 2684, 3088, 827,
     3126, 2083, 584, 4420, 1294, 917, 2881, 3659, 2868, 100, 1581, 4581,
     1664, 1001, 1213, 3439, 4706, 4869]
-
+    #sequence = [82,170,43,140,24,16,190]
     # Call the FCFS function
     fcfc_head_movement = fcfs(head, request_sequence)
     print(f"The total number of head movements is : {fcfc_head_movement}")
-
 
 
 
