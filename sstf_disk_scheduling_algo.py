@@ -23,6 +23,8 @@ def sstf(head, requests):
         temp_position = temp_requests[closestIndex]
         print(temp_position)
         print(f"\thead movement for now: {head_movement}")
+        # Remove that request i.e. head (temp_position) from
+        # the copy of the list of request
         temp_requests.remove(temp_position)
     return head_movement
 
