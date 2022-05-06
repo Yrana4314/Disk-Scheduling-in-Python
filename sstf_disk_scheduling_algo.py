@@ -1,5 +1,6 @@
-''' This is SSTF Disk Schedulig algorithm implemented in python
-By Yogesh Rana '''
+''' SSTF Disk Schedulig algorithm in Python
+By Yogesh Rana
+CISC3320'''
 
 def sstf(head, requests):
     # copy of requests list
@@ -13,7 +14,7 @@ def sstf(head, requests):
         #find the closest request to the current cylinder
         closest = abs(temp_position - temp_requests[0])
         closestIndex = 0
-        print(f"Moving Header from {temp_position} to",end=" ")
+        print(f"Now Serving request {temp_position}")
         for x in range(1, len(temp_requests)):
             if abs(temp_position - temp_requests[x]) < closest:
                 closest = abs(temp_position - temp_requests[x])
@@ -21,7 +22,6 @@ def sstf(head, requests):
         head_movement += abs(temp_position - temp_requests[closestIndex])
         # Assign new head i.e. temp_position
         temp_position = temp_requests[closestIndex]
-        print(temp_position)
         print(f"\thead movement for now: {head_movement}")
         # Remove that request i.e. head (temp_position) from
         # the copy of the list of request
